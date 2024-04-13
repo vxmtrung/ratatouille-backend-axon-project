@@ -53,4 +53,18 @@ public class AssetsModelServiceImplement implements AssetsModelService{
     public void deleteAssetsItem(long id) {
         assetsModelRepository.deleteById(id);
     }
+
+    @Override
+    public List<AssetsModel> getAssetsByName(String name)
+    {
+        List<AssetsModel> res = new ArrayList<AssetsModel>();
+
+        for (AssetsModel asm : getAllAssets())
+        {
+            if (asm.getName().contains(name))
+                res.add(asm);
+        }
+
+        return res;
+    }
 }

@@ -66,4 +66,17 @@ public class IngredientsController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @GetMapping("/{name}")
+    @CrossOrigin
+    public ResponseEntity<List<IngredientsModel>> filterByName(@PathVariable String name)
+    {
+        try 
+        {
+            List<IngredientsModel> res = ingredientsModelService.getIngredientsByName(name);
+            return new ResponseEntity<>(res, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
