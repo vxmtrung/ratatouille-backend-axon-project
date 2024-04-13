@@ -47,12 +47,8 @@ public class IngredientsController {
         Optional<IngredientsModel> _ingredientModelItem = ingredientsModelService.findIngredientsItemById(id);
 
         if (_ingredientModelItem.isPresent()){
-            if (_ingredientModelItem.get().getQuantity() >= ingredientsModel.getQuantity()) {
                 ingredientsModelService.updateIngredientsItem(id, ingredientsModel);
                 return new ResponseEntity<>(null, HttpStatus.OK);
-            } else {
-                return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-            }
         } else {
             return  new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }

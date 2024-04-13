@@ -52,12 +52,8 @@ public class AssetsController {
         Optional<AssetsModel> _assetModelItem = assetsModelService.findAssetsItemById(id);
 
         if (_assetModelItem.isPresent()) {
-            if(_assetModelItem.get().getQuantity() >= assetsModel.getQuantity()) {
                 assetsModelService.updateAssetsItem(id, assetsModel);
                 return new ResponseEntity<>(null, HttpStatus.OK);
-            } else {
-                return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-            }
         } else {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
