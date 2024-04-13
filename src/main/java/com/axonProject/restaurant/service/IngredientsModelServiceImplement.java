@@ -56,4 +56,20 @@ public class IngredientsModelServiceImplement implements IngredientsModelService
     public void deleteIngredientsItem(long id) {
         ingredientsModelRepository.deleteById(id);
     }
+    
+    @Override
+    public List<IngredientsModel> getIngredientsByName(String name)
+    {
+        List<IngredientsModel> res = new ArrayList<IngredientsModel>();
+
+        for (IngredientsModel ism : getAllIngredients())
+        {
+            if (ism.getName().contains(name))
+                res.add(ism);
+        }
+
+        return res;
+    }
+
+
 }

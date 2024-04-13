@@ -90,4 +90,17 @@ public class AssetsController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @GetMapping("/{name}")
+    @CrossOrigin
+    public ResponseEntity<List<AssetsModel>> filterByName(@PathVariable String name)
+    {
+        try 
+        {
+            List<AssetsModel> res = assetsModelService.getAssetsByName(name);
+            return new ResponseEntity<>(res, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }

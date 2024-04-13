@@ -16,4 +16,6 @@ public interface AssetsModelService {
     void updateAssetsQuantity(long id, int quantity);
 
     void deleteAssetsItem(long id);
+
+    List<AssetsModel> getAssetsByName(String name);
 }

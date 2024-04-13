@@ -15,4 +15,6 @@ public interface IngredientsModelService {
     void updateIngredientsItem(long id, IngredientsModel ingredientsModel);
 
     void deleteIngredientsItem(long id);
+
+    List<IngredientsModel> getIngredientsByName(String name);
 }
