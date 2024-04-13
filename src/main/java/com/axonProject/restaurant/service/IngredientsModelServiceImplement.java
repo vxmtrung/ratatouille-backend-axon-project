@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,6 +20,8 @@ public class IngredientsModelServiceImplement implements IngredientsModelService
         List<IngredientsModel> _ingredientsList = new ArrayList<IngredientsModel>();
 
         ingredientsModelRepository.findAll().forEach(_ingredientsList::add);
+
+        Collections.reverse(_ingredientsList);
 
         return _ingredientsList;
     }
