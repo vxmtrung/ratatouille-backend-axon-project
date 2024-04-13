@@ -8,4 +8,4 @@
 
 - Enjoy ^^
 
-![alt text](https://i.pinimg.com/736x/d3/40/89/d34089b4ae66bc76365f061d6c1b3079.jpg)
+- Delete my pic :( 
