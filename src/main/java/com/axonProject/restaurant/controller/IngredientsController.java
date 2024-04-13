@@ -17,6 +17,7 @@ public class IngredientsController {
     IngredientsModelService ingredientsModelService;
 
     @GetMapping("")
+    @CrossOrigin
     public ResponseEntity<List<IngredientsModel>> getAllIngredients() {
         try {
             List<IngredientsModel> ingredientsModelList = ingredientsModelService.getAllIngredients();
@@ -28,6 +29,7 @@ public class IngredientsController {
     }
 
     @PostMapping("")
+    @CrossOrigin
     public ResponseEntity<IngredientsModel> createIngredientsItem(@RequestBody IngredientsModel ingredientsModel) {
         try {
             ingredientsModelService.
@@ -40,6 +42,7 @@ public class IngredientsController {
     }
 
     @PutMapping("/{id}")
+    @CrossOrigin
     public ResponseEntity<IngredientsModel> updateIngredientsItem(@PathVariable long id, @RequestBody IngredientsModel ingredientsModel) {
         Optional<IngredientsModel> _ingredientModelItem = ingredientsModelService.findIngredientsItemById(id);
 
@@ -53,6 +56,7 @@ public class IngredientsController {
     }
 
     @DeleteMapping("/{id}")
+    @CrossOrigin
     public ResponseEntity<IngredientsModel> deleteIngredientsItem(@PathVariable long id) {
         try {
             ingredientsModelService.deleteIngredientsItem(id);

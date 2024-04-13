@@ -18,6 +18,7 @@ public class AssetsController {
     private AssetsModelService assetsModelService;
 
     @GetMapping("")
+    @CrossOrigin
     public ResponseEntity<List<AssetsModel>> getAllAssets() {
         try {
             List<AssetsModel> assetsModelList = assetsModelService.getAllAssets();
@@ -29,6 +30,7 @@ public class AssetsController {
     }
 
     @PostMapping("")
+    @CrossOrigin
     public ResponseEntity<AssetsModel> createAssetsItem(@RequestBody AssetsModel assetsModel) {
         try {
             assetsModelService.
@@ -41,6 +43,7 @@ public class AssetsController {
     }
 
     @PutMapping("/{id}")
+    @CrossOrigin
     public ResponseEntity<AssetsModel> updateAssetsItem(@PathVariable long id, @RequestBody AssetsModel assetsModel) {
         Optional<AssetsModel> _assetModelItem = assetsModelService.findAssetsItemById(id);
 
@@ -54,6 +57,7 @@ public class AssetsController {
     }
 
     @DeleteMapping("/{id}")
+    @CrossOrigin
     public ResponseEntity<AssetsModel> deleteAssetsItem(@PathVariable long id) {
         try {
             assetsModelService.deleteAssetsItem(id);
