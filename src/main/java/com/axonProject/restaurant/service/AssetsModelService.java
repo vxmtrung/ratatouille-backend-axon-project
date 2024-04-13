@@ -13,5 +13,7 @@ public interface AssetsModelService {
 
     void updateAssetsItem(long id, AssetsModel assetsModel);
 
+    void updateAssetsQuantity(long id, int quantity);
+
     void deleteAssetsItem(long id);
 }

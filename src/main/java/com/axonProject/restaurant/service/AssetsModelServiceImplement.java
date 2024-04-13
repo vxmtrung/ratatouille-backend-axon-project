@@ -50,6 +50,15 @@ public class AssetsModelServiceImplement implements AssetsModelService{
     }
 
     @Override
+    public void updateAssetsQuantity(long id, int quantity) {
+        AssetsModel _assetsModelitem = assetsModelRepository.findById(id).get();
+
+        _assetsModelitem.setQuantity(quantity);
+
+        assetsModelRepository.save(_assetsModelitem);
+    }
+
+    @Override
     public void deleteAssetsItem(long id) {
         assetsModelRepository.deleteById(id);
     }
