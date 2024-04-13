@@ -1,8 +1,8 @@
-# SPRING BOOT BACKEND FOR AXON PROJECT
+# SPRING BOOT BACKEND FOR ADVANCED SOFTWARE ENGINEER PROJECT
 
-- Backend Spring Boot For Restaurant Axon Project
+- Backend Spring Boot For Restaurant Project
 
-- Run database-init/restaurant-axon-init-database.sql in MySQL to create Database
+- Run database-init/restaurant-init-database.sql in MySQL to create Database
 
 - Remember to config properties suitable with your own device :D
 
