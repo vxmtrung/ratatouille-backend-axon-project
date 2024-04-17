@@ -46,7 +46,7 @@ INSERT INTO Assets (name, description, material, quantity, price_per_unit) VALUE
 ('Cash Register', 'Point-of-sale cash register system', 'Plastic', 2, 1000);
 
 INSERT INTO Ingredients (name, description, quantity, price_per_unit, import_date, expired_date) VALUES
-('Tomatoes', 'Fresh red tomatoes', 100, 2, '2024-04-01', '2024-04-15'),
+('Tomatoes', 'Fresh red tomatoes', 100, 2, '2024-04-01', '2024-04-16'),
 ('Lettuce', 'Crisp green lettuce leaves', 50, 1, '2024-04-02', '2024-04-10'),
 ('Chicken Breast', 'Skinless chicken breast fillets', 30, 5, '2024-03-28', '2024-04-10'),
 ('Beef', 'Lean beef cuts', 40, 7, '2024-03-30', '2024-04-14'),
